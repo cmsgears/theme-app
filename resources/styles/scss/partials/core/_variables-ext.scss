@@ -1,0 +1,8 @@
+// Description: The extended variables used by CMGTools. It define the secondary variables which depends on the primary variables.
+// Dependencies: variables
+
+// Transparent Colors
+
+$color-transparent-tertiary: rgba( $color-black, $color-transparency-high );
+
+$color-transparent-white: rgba( $color-white, $color-transparency-high );

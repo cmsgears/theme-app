@@ -1,0 +1,156 @@
+// Common blocks ------------------------------------------
+
+.block {
+
+    .block-wrap-content {
+        margin-top: 75px;
+
+        .block-header {
+            text-align: center;
+        }
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        .block-wrap-content {
+            margin-top: 110px;
+        }
+    }
+}
+
+// Landing Page blocks ------------------------------------
+
+#block-banner {
+
+    .block-bkg-parallax {
+        background-image: url(../images/pad.jpg);     
+    }
+
+    .block-wrap-content {
+        background-color: $color-transparent-white;
+        width: 80%;        
+        margin: 0 auto;
+
+        .block-content {
+            padding: 2em;
+            text-align: center;
+            color: $color-secondary-text-l;
+        }
+    }
+}
+
+#block-about {
+
+    .block-wrap-content {
+        margin-top: 0;
+    }
+
+    .block-wrap-content, .block-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio {
+        position: relative;
+        padding:3em 0;
+        margin: 0 10%;
+        width: 80%;   
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        .portfolio {
+            @include valign-center;
+            
+            span {
+                line-height:1em;
+            }
+        }
+    }     
+    
+    @include responsive-max( screen-desktop-small ) {
+
+        .portfolio {
+            margin: 0 4%;
+            width: 92%;
+        }
+    }
+}
+
+#block-contact {
+    padding: 2em 1em;
+
+    .block-bkg {
+        background-image: url(../images/keyboard.jpg);
+    }
+
+    .block-wrap-content {
+        background-color: $color-primary-l;
+        padding: 1em;
+        width: 500px;
+        color: $color-secondary-text-l;
+
+        .block-content {
+            text-align: center;            
+        }
+    } 
+
+
+    @include responsive-max( screen-tablet-large ) {
+
+        .block-wrap-content {
+            //background-color: $color-transparent-tertiary;
+            //color: $color-tertiary-text;
+            width: 70%;
+        }
+    }
+   
+    @include responsive-max( screen-mobile-large ) {
+
+        .block-wrap-content {            
+            width: 90%;
+        }
+    }
+}
+
+// Other blocks -------------------------------------------
+
+#block-public {
+    padding: 2em 0;
+
+    .block-bkg {
+        background-image: url(../images/pad.jpg);     
+    }
+
+    .block-wrap-content {
+        background-color: $color-white;
+        color: $color-secondary-text-l;
+        padding: 1em;
+        width: 400px;
+
+        a {
+            color: $color-link;
+        }
+
+        .help-block {
+            color: $color-error;
+        }
+    }
+
+    @include responsive-max( screen-mobile-large ) {
+
+        .block-wrap-content {
+            //background-color: $color-transparent-tertiary; 
+            width: 90%;
+            //color: $color-secondary-text;            
+        }
+    }
+
+    @include responsive-min( screen-desktop-large ) {
+
+        .block-wrap-content {
+            margin-top: 0;
+            @include valign-center;
+        }
+    }
+}
